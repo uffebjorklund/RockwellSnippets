@@ -1,4 +1,3 @@
-//#! "netcoreapp3.1"
 #!/usr/bin/env dotnet-script
 
 
@@ -25,22 +24,22 @@ var myTag = new Tag<DintPlcMapper, int>()
 	Timeout = TimeSpan.FromSeconds(5)
 };
 
-//Initialize the tag to set up structures and prepare for read/write
-//This is optional as an optimization before using the tag
-//If omitted, the tag will initialize on the first Read() or Write()
-myTag.Initialize();
+// //Initialize the tag to set up structures and prepare for read/write
+// //This is optional as an optimization before using the tag
+// //If omitted, the tag will initialize on the first Read() or Write()
+// myTag.Initialize();
 
-//The value is held locally and only synchronized on Read() or Write()
-myTag.Value = 3737;
+// //The value is held locally and only synchronized on Read() or Write()
+// myTag.Value = 3737;
 
-//Transfer Value to PLC
-myTag.Write();
+// //Transfer Value to PLC
+// myTag.Write();
 
-//Transfer from PLC to Value
-myTag.Read();
+// //Transfer from PLC to Value
+// myTag.Read();
 
-//Write to console
-int myDint = myTag.Value;
-Console.WriteLine(myDint);
+// //Write to console
+// int myDint = myTag.Value;
+// Console.WriteLine(myDint);
 
 Console.WriteLine("Hello world Read!");
